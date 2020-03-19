@@ -26,7 +26,7 @@
         <ul class="navbar-nav">
             <div class="col-md-1">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=URL;?>/user">Home</a>
+                    <a class="nav-link" href="<?=URL;?>/User">Home</a>
                 </li>
             </div>
             <div class="col-md-1">
@@ -45,7 +45,7 @@
                         <?=$_SESSION['User']['username'];?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?=URL;?>/user/logout">Logout</a>
+                        <a class="dropdown-item" href="<?=URL;?>/User/logout">Logout</a>
                     </div>
                 </li>
             </div>
