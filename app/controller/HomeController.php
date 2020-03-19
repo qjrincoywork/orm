@@ -65,7 +65,7 @@ class HomeController extends Controller
                     if($user[0]['is_active']) {
                         if($logData['password'] == $user[0]['password']){
                             Session::setSession('User',$user[0]);
-                            header("location: ".URL."/user");
+                            header("location: ".URL."/User");
                             exit;
                         } else {
                             $data['error'] = 'Wrong password.';
