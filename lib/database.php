@@ -130,19 +130,20 @@ class DB
     }
   }
 
-  public function update($values = [])
+  public function update($table, $values = [])
   {
     if(isset($values['id'])) {
       $id = $values['id'];
       unset($values['id']);
-
+      
       $sets = [];
       foreach ($values as $field => $v)
           $sets[] = $field. '=:' . $field;
 
       $sets = implode(', ', $sets);
+
       $values['id'] = $id;
-      $sql = "UPDATE $this->table SET $sets WHERE id=:id";
+      $sql = "UPDATE $table SET $sets WHERE id=:id";
 
       try {
         $this->pdo->beginTransaction();

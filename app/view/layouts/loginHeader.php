@@ -37,9 +37,9 @@
                 </div>
 
                 <div class="form-group">
-                        <button type="submit" class="login_user btn btn-primary btn-sm">
-                            Login
-                        </button>
+                    <button type="submit" class="login_user btn btn-primary btn-sm">
+                        Login
+                    </button>
                 </div>
             </div>
         </form>
