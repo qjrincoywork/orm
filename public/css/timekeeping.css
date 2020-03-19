@@ -1,0 +1,294 @@
+#particles-js {
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+body.body-timekeeping {
+  border: 0;
+  padding: 0;
+  background-image: url(/images/curo-hexa-2.png?cf91759d1fb899ee375f9dfaf388598a);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.errmsg {
+  color: 590004;
+  position: fixed;
+  z-index: 99999999;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 5px 10px 0 #1f1f1f;
+  transition: all 1s;
+}
+.errmsg strong {
+  font-size: 2em;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  color: #EE4266;
+}
+.errmsg p {
+  font-weight: bolder;
+  color: #EE4266;
+}
+.errmsg ul {
+  float: left;
+}
+.timekeeping-wrapper {
+  padding-top: 150px;
+}
+.timekeeping-wrapper .timekeeping {
+  background: #000000c8;
+  box-shadow: 0 0 10px 1px black;
+  padding: 20px;
+  border-radius: 10px;
+}
+.timekeeping-wrapper .timekeeping .curo {
+  padding: 10px 30px;
+  display: flex;
+}
+.timekeeping-wrapper .timekeeping .curo img {
+  height: 40px;
+}
+.timekeeping-wrapper .timekeeping .curo span {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0 10px;
+}
+.timekeeping-wrapper .timekeeping .hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+  margin: none;
+  background: linear-gradient(to right, rgba(200, 200, 200, 0) 0%, #c8c8c8 5%, #c8c8c8 6%, rgba(200, 200, 200, 0) 100%);
+}
+.timekeeping-wrapper .timekeeping .date-time {
+  text-align: center;
+}
+.timekeeping-wrapper .timekeeping .date-time .date {
+  font-family: "Days One", sans-serif;
+  text-transform: lowercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.timekeeping-wrapper .timekeeping .date-time .date .dayVal {
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+.timekeeping-wrapper .timekeeping .date-time .date .dateVal {
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 1em !important;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog {
+  margin-top: 20px;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .outer {
+  fill: transparent;
+  /* stroke: #fff; */
+  stroke: #d89f19;
+  stroke-width: 7;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .outer.outer-minutes {
+  opacity: 0.5;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .outer.outer-hours {
+  opacity: 0.75;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .outer.outer-seconds {
+  opacity: 0.95;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .outer-clock {
+  fill: transparent;
+  stroke-width: 1;
+  stroke: #464646;
+  stroke-width: 3;
+  opacity: 0.95;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .clock {
+  position: relative;
+  height: 300px;
+}
+.timekeeping-wrapper .timekeeping .date-time .analog .clock svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.timekeeping-wrapper .timekeeping .date-time .digital {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.timekeeping-wrapper .timekeeping .date-time .digital #_time {
+  color: #888;
+}
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .hourVal,
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .minVal,
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .secVal,
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .divider {
+  font-family: "Digital 7", sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .hourVal,
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .minVal,
+.timekeeping-wrapper .timekeeping .date-time .digital #_time .secVal {
+  color: white !important;
+}
+.timekeeping-wrapper .timekeeping .date-time .digital #_time span:nth-child(6) {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+.timekeeping-wrapper .timekeeping .credentials form {
+  position: relative;
+  padding: 0 60px 0 0;
+  top: 25%;
+}
+.timekeeping-wrapper .timekeeping .credentials form .form-group {
+  margin-bottom: 0;
+  padding: 10px;
+  background: white;
+}
+.timekeeping-wrapper .timekeeping .credentials form .form-group:nth-child(2) {
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 1px;
+}
+.timekeeping-wrapper .timekeeping .credentials form .form-group:nth-child(3) {
+  padding-top: 1px;
+}
+.timekeeping-wrapper .timekeeping .credentials form input {
+  font-size: 1.1em;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  border: none;
+}
+.timekeeping-wrapper .timekeeping .credentials form .timekeep_login {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  width: 100%;
+  background: #0FA3B1;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  box-shadow: 0 -1px 3px 0px #333;
+}
+.timekeeping-wrapper .timekeeping .credentials form .timekeep_login:hover {
+  background: #5db6e6;
+}
+.timekeeping-wrapper .timekeeping .credentials form a {
+  text-decoration: none;
+  color: #0FA3B1;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  opacity: 0.75;
+}
+.timekeeping-wrapper .timekeeping .credentials form a:hover {
+  transition: all 100ms;
+  opacity: 1;
+}
+.timekeeping-wrapper .timekeeping .date-time,
+.timekeeping-wrapper .timekeeping .credentials {
+  padding: 40px 10px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .timekeeping-wrapper .timekeeping .date-time .analog .clock {
+    left: -30px;
+  }
+  .timekeeping-wrapper .timekeeping .credentials form {
+    padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .timekeeping-wrapper .timekeeping .row .date-time {
+    padding: 20px 10px;
+  }
+  .timekeeping-wrapper .timekeeping .row .credentials {
+    padding-top: 0px;
+    margin-bottom: 10px;
+  }
+  .timekeeping-wrapper .timekeeping .row .credentials form {
+    top: 0;
+    padding-right: 0px;
+  }
+}
+.timekeeping-wrapper .login-link {
+  text-align: center;
+  margin-bottom: 150px;
+  width: 230px;
+}
+.timekeeping-wrapper .login-link:hover a div {
+  color: white;
+  background-color: #7600cf;
+}
+.timekeeping-wrapper .login-link a {
+  text-decoration: none;
+}
+.timekeeping-wrapper .login-link a div {
+  position: relative;
+  z-index: -1;
+  height: 35px;
+  width: 200px;
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-align: center;
+  color: #ccc;
+  background-color: #7500cf8a;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 0 10px 2px black;
+}
+@media only screen and (min-width: 1200px) {
+  .timekeeping-wrapper {
+    max-width: 900px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .timekeeping-wrapper {
+    padding: 0;
+    padding-top: 45px;
+  }
+  .timekeeping-wrapper .login-link {
+    margin-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .timekeeping-wrapper .timekeeping .curo {
+    padding-left: 10px;
+    display: block;
+  }
+  .timekeeping-wrapper .timekeeping .date-time .digital {
+    font-size: 0.75em !important;
+  }
+}
+@media (min-width: 0px) {
+  .timekeeping-wrapper {
+    transition: all 1s;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .timekeeping-wrapper {
+    padding: 0;
+    transform: scale(0.7);
+  }
+  .timekeeping-wrapper .login-link {
+    margin-bottom: 0;
+  }
+}

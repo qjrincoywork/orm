@@ -1,0 +1,94 @@
+@import (css) "animate.css";
+
+/************* Variable ********************/
+/* Color */
+@primary-color: #ffffff;
+@secondary-color: #343a40;
+@nav-font-color: #575a5e;
+@white-font-color: #ffffff;
+@black-font-color: #000000;
+@orange-font-color: #ffb300;
+
+/************* End of Variable *************/
+
+/************* Mixin ********************/
+
+
+
+/************* End of Mixin *************/
+
+
+/************* Implementation ********************/
+
+.bg-primary{
+	background-color: @primary-color !important;
+}
+
+.navbar-nav{
+	
+	.nav-link {
+		color: @black-font-color !important;
+		float: right;
+	}
+}
+
+.navbar-dark {
+	background-color: @white-font-color !important;
+
+	button{
+	  background-color: #ffb300 !important;
+	  }
+	}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+#top-page{
+	background: linear-gradient(-45deg,#ffb300 33%,transparent 0),linear-gradient(-45deg,#ffffff 100%,transparent 0);
+	h1, h4, p{
+		color: @black-font-color !important;
+	}
+	.container{
+		    margin-top: 40px;
+	}
+}
+
+#download{
+	background-color: @primary-color !important;
+	h2{
+		color: @orange-font-color !important;
+	}
+}
+
+#team{
+	background-color: @secondary-color !important;
+
+	.card-body{
+		color: @secondary-color !important;
+		p{
+			color: @black-font-color !important;
+		}
+	}
+	h2{
+		color: @orange-font-color !important;
+	}
+	p{
+		color: @white-font-color !important;
+	}
+}
+
+#contact{
+	background: linear-gradient(-45deg,#ffb300 33%,transparent 0),linear-gradient(-45deg,#ffffff 67%,transparent 0),linear-gradient(-45deg,#ffb300 100%,transparent 0);
+	p{
+		color: @black-font-color !important;
+	}
+}
+
+/************* End of Implementation *************/
+
+/************* Custom ********************/
+
+
+
+/************* End of Custom *************/

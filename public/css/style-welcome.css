@@ -1,0 +1,64 @@
+@import "animate.css";
+/************* Variable ********************/
+/* Color */
+/************* End of Variable *************/
+/************* Mixin ********************/
+/************* End of Mixin *************/
+/************* Implementation ********************/
+.bg-primary {
+  background-color: #ffffff !important;
+}
+.navbar-nav .nav-link {
+  color: #000000 !important;
+  float: right;
+}
+.navbar-dark {
+  background-color: #ffffff !important;
+}
+.navbar-dark button {
+  background-color: #ffb300 !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black;
+}
+#top-page {
+  background: linear-gradient(-45deg, #ffb300 33%, transparent 0), linear-gradient(-45deg, #ffffff 100%, transparent 0);
+}
+#top-page h1,
+#top-page h4,
+#top-page p {
+  color: #000000 !important;
+}
+#top-page .container {
+  margin-top: 40px;
+}
+#download {
+  background-color: #ffffff !important;
+}
+#download h2 {
+  color: #ffb300 !important;
+}
+#team {
+  background-color: #343a40 !important;
+}
+#team .card-body {
+  color: #343a40 !important;
+}
+#team .card-body p {
+  color: #000000 !important;
+}
+#team h2 {
+  color: #ffb300 !important;
+}
+#team p {
+  color: #ffffff !important;
+}
+#contact {
+  background: linear-gradient(-45deg, #ffb300 33%, transparent 0), linear-gradient(-45deg, #ffffff 67%, transparent 0), linear-gradient(-45deg, #ffb300 100%, transparent 0);
+}
+#contact p {
+  color: #000000 !important;
+}
+/************* End of Implementation *************/
+/************* Custom ********************/
+/************* End of Custom *************/

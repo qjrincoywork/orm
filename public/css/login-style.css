@@ -1,0 +1,102 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;  
+    /* background-image: url("../img/bg-login.png");  */
+    background-image: url("../img/curo-hexa-3.png"); 
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    background-position:  center;
+    background-color: rgb(199, 199, 199);  
+}
+
+
+/* CLASSES */
+.center-h{
+    position: absolute; 
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align:  center;
+}
+.center-v{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.forgot-password{
+    color: #ffb300;
+    font-style:  italic;
+}
+.go-back{
+    color: #ffffff;
+}
+.copyright{
+    color: aliceblue;
+    font-size: 1vmin;
+    font-size:calc(2px + 1vmin);
+}
+.hr-footer{
+    border: 1px dashed #414141;
+    width: 50%;
+}
+
+
+/* IDs */
+#particles-js{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+#container{
+    width: 40vw;
+    min-width: 260px;
+    /* background-image:  linear-gradient(90deg, rgba(5, 5, 5, 0.5), rgba(212, 212, 212, 0.5), rgba(255, 255, 255, 0.5));    */
+    /* background-color: rgba(250, 235, 215, 0.462); */
+    background: #000000c4;
+    box-shadow: 0 0 10px 1px black;
+    border: 2px solid black;
+    padding: 3vh 6vw 3vh 6vw;
+    border-radius: 2vmin;
+}
+#login-container{
+    position:  absolute;
+}
+#curo-logo{
+    width: 3vmax;
+}
+#welcome{
+    font-family: "No Name";
+    color: #cecece;
+    letter-spacing: .5vmin;
+    font-size: 1vmax;
+    font-size:calc(3px + 1vmax);
+}
+#comp-name{
+    width: 20vmax;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 30px;
+    min-width: 200px;
+    filter:  drop-shadow(0px 2px 2px rgb(0, 0, 0));   
+}
+
+
+/* FONTS */
+@font-face {
+    font-family: "No Name";
+    src: url("../fonts/No Name/no-name-reg.otf");
+}
+@font-face {
+    font-family: "No Name Light";
+    src: url("../fonts/No Name/no-name-light.otf");
+}

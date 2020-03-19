@@ -1,0 +1,503 @@
+@color-main: rgb(70, 70, 70);
+@primary-color: #2F4858;
+@secondary-color: #4ab7ff;
+@tertiary-color: #f6f8fa;
+@company-profile-color: #ffb300;
+@company-profile-shadow: #ffb30040;
+@company-profile-color-alt: #a6a6a6;
+@font-color-dark: #343434;
+@font-color-light: #ddd;
+@font-color-warning: #ff8096;
+@panel-header-font-color: #1f364f;
+@border-color: #e6e6e6;
+@sidebar-color: #fafafa;
+@content-bg-color: rgba(6, 29, 43, 0.6); //#061d2b
+@content-bg-color-darker: rgba(6, 29, 43, 0.8);
+@bs-primary: #0275d8;
+@bs-success: #5cb85c;
+@bs-danger: #d9534f;
+@company-pale: #ffb30080;
+//Desktop
+.main-content{
+    .section__content{
+        &.section__content--p30{
+            margin-bottom: 2em !important;
+        }
+    }
+}
+
+#knowledge-index{
+    // background: @content-bg-color;
+    margin: 0 4em !important;
+    .col-md-4{
+        padding: 0 !important;
+        .card{
+            height: 15em;
+            background-color: @content-bg-color !important;
+            margin: 1px !important;
+            // border: 1px solid rgba(255, 0, 0, 0.048) !important;
+            border: none !important;
+            border-radius: 0 !important;
+            // box-shadow: 0px 1px 1px 0px rgb(219, 219, 219);
+            box-shadow: 0 10px 30px #00000058;
+            &>a{
+                
+                color: @color-main !important;
+                padding-top: 3em !important;
+                box-shadow: none !important;
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 0px 0px 30px 0px #0005 !important;
+                    z-index:9999 !important;
+                    cursor: pointer;
+                    // background: @company-profile-color !important;
+                    
+                    background: linear-gradient(45deg, darken(@company-profile-color, 10%), lighten(@company-profile-color, 10%));
+                    svg, i{
+                        background: linear-gradient(45deg, darken(@primary-color, 10%), lighten(@primary-color, 10%));
+                        border-color: @primary-color !important;
+                        color: white;
+                        border-color: @primary-color;
+                        img{
+                            filter: invert(1);
+                        }
+
+                    }
+                    .card-body h3{
+                        color: @primary-color !important;
+                        transform: scale(1.25);
+                    }
+                }
+                svg, i{
+                    margin: auto !important;
+                    transition: color 200ms ease-in-out, background 200ms ease-in-out;
+                    border: 6px solid @font-color-light !important;
+                    height: 70px;
+                    width: 70px;
+                    padding: 15px;
+                    border-radius: 100%;
+                    img{
+                        filter: invert(1) brightness(80%);
+                        height: 100%;
+                    }
+                }
+                .card-body{
+                    h3{
+                        color: @font-color-light !important;
+                        font-size: larger;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//max-width 767
+@media screen and (max-width: /* 767px */ 991px) {
+    .main-content{
+        padding-top: 0px !important;
+        .section__content{
+            &.section__content--p30{
+                margin: 2em 0 10em 0 !important;
+                padding: 0 3.5em;
+                .row{
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+
+    #knowledge-index{
+        .col-md-4{
+            .card{
+                height: auto !important;
+                &>a{
+                    .card-body{
+                        h3{
+                            font-size: .98em;   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//FAQ & SPIELS
+/* .faq-topic{
+    // text-align: center;
+    background: @content-bg-color-darker;
+    border: none;
+    padding: 1.5em !important;    
+    box-shadow: 0 10px 30px #00000058;
+    h3[class*='title']{
+        font-weight: bolder;
+        margin: auto;
+        width: fit-content;
+        font-size: 2.5em;
+        color: @font-color-light;
+    }
+    .add{
+        width: fit-content;
+        margin: auto;
+        margin-top: 5px;
+        a{
+            background: @company-profile-color !important;
+            border: none !important;
+            color: @primary-color;
+            font-weight: bold;
+            &:hover, &:focus{
+                background: darken(@company-profile-color, 10%) !important;
+                box-shadow: none !important
+            }
+        }
+    }
+}
+
+.faq-content{
+    &.container{
+        // background: rgba(0, 0, 0, 0.2);
+        padding: 0 !important;
+        max-width: 100%;
+        margin: 0 !important;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .faq-container{
+        max-width: 50%;
+        margin: 0 !important;
+    }
+    .card{
+        margin-bottom: 0;
+    }
+    .border-info{
+        border: none !important;
+        border-radius: 0 !important;
+        background: none !important;
+    }
+    .faq-container{
+        padding: 0 !important;
+        // background: @content-bg-color;
+    }
+    .card-header{
+        min-height: 7em;
+        padding: 0;
+        background: @content-bg-color-darker !important;
+        background-size: cover !important;
+        border-radius: 0 !important;
+        margin: 1px;
+        border: 3px solid transparent;
+        &:hover{
+            border-color: @company-pale;
+        }
+        .get_faq{
+            height: 7em;
+            width: 100%;
+            color: white !important;
+            padding: .75rem 1.25rem;
+            padding-right: 3em;
+        }
+        span{
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            a{color: @company-profile-color !important;}
+            &:hover{
+                a{color: @company-pale !important;}
+            }
+        }
+    }
+    .collapse, .collapse.show{
+        background: rgba(6, 29, 43, 0.8);
+        margin: -1px 1px 5px;
+        position: relative;
+        z-index: -1;
+        color: @company-profile-color;
+        
+        .answer{
+            color: white !important;
+        }
+    }
+    b{
+        &.q{
+            color: @company-profile-color;
+        }
+        &.a{
+            color: @company-pale;
+        }
+        &.head{
+            // color: black;
+            font-weight: 500;
+        }
+        &.answer{
+            color: #1e31c1 !important;
+        }
+    }
+} */
+
+
+/* @media (max-width: 780px){
+    .faq-content{
+        .card-header{
+            min-height: 10em;
+            .get_faq{
+                height: 10em;
+            }
+            span{
+                position: absolute;
+                top: .5em;
+                right: .5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 518px){
+    .faq-content{
+        &.container {
+            width: 100%;
+            padding: 0;
+            display: block;
+        }
+        .faq-container{
+            max-width: 100%;
+        }
+        .card-header{
+            min-height: 5em;
+            .get_faq{
+                height: 5em;
+            }
+        }
+    }
+}
+ */
+
+
+.split-quesaccordion{
+    #quesaccordion{
+        margin: auto !important;
+    }
+    .card{
+        background: @content-bg-color-darker;
+        border-radius: 0;
+        overflow: hidden;
+        border: 2px solid #2F4858;
+    }
+    .card-header{
+        background: @primary-color;
+        min-height: 5em;        
+        border-radius: 0;
+        cursor: pointer;
+        &>div{
+            width: 90%;
+            float: left;
+        }
+    }
+}
+
+
+
+
+//PRODUCT
+.product-container{
+    // padding: 2em;
+    background: @content-bg-color-darker;
+    border: none !important;
+    box-shadow: 0 10px 30px #00000058;
+    .row.main{
+        width: 100%;
+        margin: auto;
+        .select-main-container{
+            width: inherit;
+            margin: inherit;
+            background: @company-profile-color;
+            padding: 2em 2em;
+            padding-top: 0;
+            // box-shadow: 0px 2px 5px 0px grey;
+            .selector-container{
+                padding: 0 1em;
+                
+                .card{
+                    border: none;
+                    margin: 0;
+                    margin-top: 2em;
+                    background: none;
+                    color: @primary-color;
+                    label{
+                        padding-left: 1em;
+                    }
+                    select{
+                        // background: none;
+                        border: .1em solid white;
+                        // color: white;
+                        padding: 0 .5em;
+                    }
+                    option{
+                        // background: #b92730;
+                        &[value=""]{color: grey;}
+                        &:hover{
+                            background: yellow;
+                        }
+                    }
+                }            
+            }
+        }
+        hr{
+            width: 100%;
+            border-bottom: 1px solid rgb(211, 211, 211);
+            margin-top: 0;
+            margin-bottom: 2em;
+            box-shadow: 0px 0px 0px 0px rgb(228, 228, 228);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .product-table-container{
+            .product_details{
+                margin: 2em;
+                // box-shadow: 10px 10px #80808030;
+                background: transparent;
+                border: none;
+                table.table{
+                    border: none;
+                    tbody{
+                        tr{
+                            &:nth-child(-n+12){
+                                td{
+                                    border: none;
+                                    &:nth-child(1){
+                                        width: 20%;                                    
+                                        // background: #e2051275;
+                                        // color: #fff;
+                                    }
+                                }
+                                                                
+                            }
+                            &:nth-child(13), &:nth-child(14), &:nth-child(15){
+                                &:hover{
+                                    background: none;
+                                }
+                            }
+                            &:nth-child(13){
+                                td{
+                                    padding: 0;
+                                    border: none;
+                                }
+                            }
+                            &:nth-child(14){
+                                td{
+                                    border-radius: 15px 15px 0 0;
+                                    border: none; 
+                                    background: @content-bg-color-darker;
+                                }
+                            }
+                            &:nth-child(15){
+                                td{
+                                    border: none; 
+                                    background: @content-bg-color-darker;
+                                    border-radius: 0 0 15px 15px;
+                                    padding-bottom: 2em;
+                                    img{
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.call-flow, .call-handling{
+    background: @content-bg-color-darker;
+    box-shadow: 0 10px 30px #00000058;
+    border: none;
+    .nav.nav-tabs {
+        border-bottom: none;
+        display: flex;
+        justify-content: left;
+        padding-left: 10px;
+        padding: 0px 10px 10px;
+        a.nav-item{
+            color: @font-color-light;
+            border: none;
+            font-size: 1.2em;
+            border-radius: 50px;
+            margin-right: 10px;
+            &.active{
+                background: @company-profile-color;
+                color: @primary-color;
+                border: none;
+            }
+            &:not(.active):hover{
+                color: @company-profile-color !important;
+            }
+        }
+    }
+    .tab-content{
+        border-radius: 5px;
+    }
+}
+
+.plant-codes{
+    h3[class*='title']{
+        font-weight: bolder;
+        width: fit-content;
+        font-size: 2em;
+        color: @font-color-light;
+        filter: none;
+        float: left;
+    }
+    .add_PlantCode{
+        background: @company-profile-color !important;
+        border: none !important;
+        color: @primary-color;
+        font-weight: bold;
+        float: right;
+        padding: .5em 2em;
+        &:hover, &:focus{
+            background: darken(@company-profile-color, 10%) !important;
+            box-shadow: none !important
+        }
+    }
+    table{
+        width: 100% !important;
+        text-align: center;
+        tbody tr th{
+            border: none;
+            border-right: 1px solid #2F4858 !important;
+            border-top: 1px solid #2F4858 !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1367px){
+    .split-quesaccordion{
+        min-width: unset !important;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.btn-gold{
+    background-color: @company-profile-color;
+    color: @primary-color;
+    font-weight: bold;
+    &:hover{
+        color: darken(@company-profile-color, 20%);
+    }
+    &:focus{
+        box-shadow: 0 0 0 0.2rem  @company-profile-shadow !important;
+    }
+}
+
+a.text-{
+    &gold{
+        color: @company-profile-color;
+        &:hover{
+            color: darken(@company-profile-color, 20%);
+        }
+    }
+}

@@ -1,0 +1,120 @@
+body#login {
+    background-image: url('/img/CTI_loginbg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body#login #component-login {
+    height: 100%;
+    width: 100.8%;
+    background-color: rgba(24, 41, 61, 0.8);
+}
+
+body#login #component-login .login-form-wrapper {
+    padding: 0 70px;
+}
+
+body#login #component-login .login-form-wrapper .login-form-footer p {
+    color: #b0b0b0;
+    font-size: smaller;
+}
+
+body#login #component-login .login-form-wrapper .login-form-go-back {
+
+    margin: 10px 0;
+}
+
+body#login #component-login .login-form-wrapper .login-form-forgotpassword {
+
+    margin: 10px 0;
+}
+
+form#form-signin .form-group,
+form#form-forgotpassword .form-group {
+    text-align: center;
+}
+
+form .form-group {
+    margin-bottom: .2rem;
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+form#form-signin .form-group .form-control,
+form#form-forgotpassword .form-group .form-control {
+    background-color: transparent;
+    border-color: transparent transparent rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 0;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+div.well {
+    height: 250px;
+}
+
+.Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+    width: 50%;
+    height: 50%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 40px;
+}
+
+#logo-container {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 30px;
+}

@@ -1,0 +1,53 @@
+
+.btn-primary {
+	color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.right-pane-backdrop {
+			position: fixed;
+    		top: 5px;
+			z-index: 1020;
+			height: calc(~"100% - 0px");
+    		width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.right-pane {
+				position: fixed;
+			    right: -1px;
+				z-index: 1020;
+				height: calc(~"100% - 0px");
+			    width: 65vw;
+			    background-color: #fff;
+				padding: 0 15px;
+				overflow: auto;
+				box-shadow: inset -1px 0 6px rgba(31, 54, 79, 0.2); 
+			    -webkit-transform: translate(0,0);
+			    -moz-transform: translate(0,0);
+			    -ms-transform: translate(0,0);
+			    -o-transform: translate(0,0);
+			    transform: translate(0,0);
+			    -webkit-transition: -webkit-transform .3s;
+			    -moz-transition: -moz-transform .3s;
+			    -o-transition: -o-transform .3s;
+			    transition: -webkit-transform .3s,-moz-transform .3s,-o-transform .3s,transform .3s;
+			    backface-visibility: hidden!important;
+				&.hidden {
+					-webkit-transform: translate(100%,0);
+				    -moz-transform: translate(100%,0);
+				    -ms-transform: translate(100%,0);
+				    -o-transform: translate(100%,0);
+				    transform: translate(100%,0);
+				}
+			}
+		}
+
+.urc-details-wrapper{
+    background-color: red;
+    .class{
+        height:100px;
+    }
+    .class2 {
+        height:10px;
+    }
+}

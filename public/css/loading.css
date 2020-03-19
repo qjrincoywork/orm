@@ -1,0 +1,122 @@
+.loading{
+    background-color: rgb(19, 19, 27);
+    height: 100%;
+    width: 100%;
+    position:  fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999 !important;
+}
+
+.loader{
+    background-color: rgba(19, 19, 27, .8) !important;
+}
+
+.load-wrapper{    
+    padding: 0;
+    position:  absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading>.load-wrapper>.top, .loading>.load-wrapper>.mid, .loading>.load-wrapper>.bot{
+    height: 30px;
+    margin: 6px 0px;
+}
+.loading .cube{
+    height: 30px;
+    width:  30px;
+    margin: 0px 3px;
+}
+.loading .cube>.face{
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+.top, .mid, .bot{
+    width: inherit;
+    height: 200px;
+    margin: 30px 0px;
+}
+
+.cube{
+    transform-style:  preserve-3d;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 0px 20px;
+}
+
+.cube .face{
+    width: 200px;
+    height: 200px;
+    position:  absolute;
+    
+}
+
+.cube-gold .face{
+    background: #ffb300;
+    border: 1px solid white;
+}
+
+.cube-gray .face{
+    background: rgb(226, 226, 226);
+    border: 1px solid white;
+}
+
+.loader .load-wrapper span p{
+    text-align:  center;
+    color: beige;
+    font-family: 'Nexa Bold';
+    text-transform:  uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+    animation: flick 2s linear infinite;
+}
+
+/* ANIMATION ASSIGNMENT */
+.loading>.load-wrapper>.top>.cube:nth-child(1){
+    animation: load 500ms linear infinite;
+}
+
+.loading>.load-wrapper>.top>.cube:nth-child(2), .loading>.load-wrapper>.mid>.cube:nth-child(1){
+    animation: load 500ms linear 50ms infinite;
+}
+
+.loading>.load-wrapper>.top>.cube:nth-child(3), .loading>.load-wrapper>.mid>.cube:nth-child(2), .loading>.load-wrapper>.bot>.cube:nth-child(1){
+    animation: load 500ms linear 100ms infinite;
+}
+
+.loading>.load-wrapper>.mid>.cube:nth-child(3), .loading>.load-wrapper>.bot>.cube:nth-child(2){
+    animation: load 500ms linear 150ms infinite;
+}
+
+.loading>.load-wrapper>.bot>.cube:nth-child(3){
+    animation: load 500ms linear 200ms infinite;
+}
+
+
+/* HOVER */
+.loading .load-wrapper .cube-gold:hover .face{
+    background: #ffe469;
+}
+.loading .load-wrapper .cube-gray>.face:hover{
+    background: white;
+}
+
+/* ANIMATION */
+@keyframes load{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: .01;
+    }
+    30%{
+        opacity: .01;
+    }
+    100%{
+        opacity: 1;
+    }
+}
