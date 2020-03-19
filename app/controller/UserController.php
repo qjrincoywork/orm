@@ -27,7 +27,7 @@ class UserController extends Controller
         $data['is_active'] = $status;
         $result = $db->update('user_profile', $data);
 
-		header("location: ".URL."/user");
+		header("location: ".URL."/User");
     }
     
     public function edit()
