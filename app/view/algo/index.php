@@ -25,9 +25,10 @@
                     </div>
                 </form>
                 <?php
-                    if(isset($data['email']))
+                    if(isset($data['result']))
                     {
-                        echo $data['email'];
+                        echo "Sample: " . $data['sample'] . "<br>";
+                        echo "Result: " . $data['result'];
                     }
                 ?>
             </div>

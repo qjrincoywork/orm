@@ -4,8 +4,10 @@ class AlgorithmController extends Controller
 {
     public function index()
     {
-        $values = $_POST;
+        $data = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $values = $_POST;
+            $data['sample'] = $values['email'];
             if (!filter_var($values['email'], FILTER_VALIDATE_EMAIL)) {
                 $data['error'] = "Invalid email format";
             } else {
@@ -16,12 +18,13 @@ class AlgorithmController extends Controller
                     foreach ($res as $v) {
                         $username .= $v[0];
                     }
-                    $data['data'] = $username;
+                    $data['result'] = $username;
                 } else {
-                    $data['data'] = $username;
+                    $data['result'] = $username;
                 }
             }
         }
+        
         $data['title'] = 'MVC - Algorithm';
         $this->render->view('algo/index', $data);
     }
