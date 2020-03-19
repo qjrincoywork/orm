@@ -15,9 +15,9 @@ class Route
 		
         $function = isset($url[1]) ? $url[1] : 'index';
         
-		if(!Session::getSession('User') && $url[0] != 'user')
+		if(!Session::getSession('User') && $url[0] != 'User')
 		{
-            $controller = 'homeController';
+            $controller = 'HomeController';
 			$path = 'app/controller/' . $controller . '.php';
 		}
 		

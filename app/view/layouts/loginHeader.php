@@ -24,7 +24,7 @@
 <nav class="navbar navbar-light bg-secondary">
     <!-- Navbar content -->
     <div class="col-md-6 offset-md-6">
-        <form class="form-login form-inline" method="POST" action="<?=URL;?>/home/login">
+        <form class="form-login form-inline" method="POST" action="<?=URL;?>/Home/login">
             <div class="row">
                 <div class="form-group">
                     <label for="username" class="col-form-label text-md-right">Username</label>

@@ -65,7 +65,7 @@
                     $table .= "<td>".$value."</td>";
                 }
                 
-                $buttons = " <a href='".URL."/user/delete?id=" . $employee['id'] . "' id = '" . $employee['id'] . "' data-toggle='tooltip' data-placement='left' title='" . $actionTitle . "' type='submit' class='" . $actionClass . " btn btn-primary text-secondary btn-sm'>" . $icon . "</a> ";
+                $buttons = " <a href='".URL."/User/delete?id=" . $employee['id'] . "' id = '" . $employee['id'] . "' data-toggle='tooltip' data-placement='left' title='" . $actionTitle . "' type='submit' class='" . $actionClass . " btn btn-primary text-secondary btn-sm'>" . $icon . "</a> ";
                 // $buttons .= "<button href='".URL."/user/edit?id=" . $employee['id'] . "' data-toggle='tooltip' data-placement='left' title='Edit' type='submit' class='edit_user btn btn-primary text-secondary btn-sm'><i class= 'fas fa-edit'></i></button>  ";
                 $table .= "<td>".$buttons."</td>";
                 $table .= "</tr>";
