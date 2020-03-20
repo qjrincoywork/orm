@@ -48,7 +48,7 @@ class Home extends Controller
         }
         
         $data['title'] = 'MVC - Home';
-        $this->render->view('home/index', $data);
+        $this->render->view('home/register', $data);
     }
 
     public function login() 
