@@ -2,17 +2,20 @@
 namespace lib;
 class Session{
 	static function init(){
-		session_start();
-		$sessionTime = 60 * 60 * 12 * 100;
-		
-		if (isset($_SESSION["time"])) {
+		if(!isset($_SESSION)) 
+		{ 
+			session_start();
+			$sessionTime = 60 * 60 * 12 * 100;
 			
-			$sessionTTL = time() - $_SESSION["time"];
-			if ($sessionTTL > $sessionTime) {
-				self::destroy();
+			if (isset($_SESSION["time"])) {
+				
+				$sessionTTL = time() - $_SESSION["time"];
+				if ($sessionTTL > $sessionTime) {
+					self::destroy();
+				}
 			}
-		}
-		$_SESSION["time"] = time();
+			$_SESSION["time"] = time();
+		} 
 	}
 	
 	static function getSession($key){

@@ -1,20 +1,21 @@
 <?php
 use lib\Session;
 
-class UserController extends Controller
+class User extends Controller
 {
     public function index()
     {
         $data = [];
-        if(isset($_SESSION['User'])){
+        if(isset($_SESSION['user'])){
+            $session = $_SESSION['user'];
             $db = new DB;
             $data['user_profile'] = $db->find('user_profile', ['id' => $session['id']]);
 
-            $sql = "SELECT e.id,ep.first_name,ep.last_name,ep.middle_name, e.is_active, e.date_created
-                    FROM user e 
-                    LEFT JOIN user_profile ep
-                        ON e.id = ep.id";
-
+            $sql = "SELECT u.id,up.first_name,up.last_name,up.middle_name, u.is_active, u.date_created
+                    FROM user u
+                    LEFT JOIN user_profile up
+                        ON u.id = up.user_id";
+                        
             $data['users'] = $db->select($sql);
             // $data['users'] = $db->find('user_profile');
             $data['title'] = 'MVC - User';
@@ -33,7 +34,7 @@ class UserController extends Controller
         $data['is_active'] = $status;
         $result = $db->update('user', $data);
 
-		header("location: ".URL."/User");
+		header("location: ".URL."/user");
     }
     
     public function edit()
@@ -50,4 +51,3 @@ class UserController extends Controller
 		header("location: ".URL);
 	}
 }
-?>

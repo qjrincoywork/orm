@@ -26,26 +26,26 @@
         <ul class="navbar-nav">
             <div class="col-md-1">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=URL;?>/User">Home</a>
+                    <a class="nav-link" href="<?=URL;?>/user">Home</a>
                 </li>
             </div>
             <div class="col-md-1">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=URL;?>/Algorithm">Algorithm</a>
+                    <a class="nav-link" href="<?=URL;?>/algorithm">Algorithm</a>
                 </li>
             </div>
             <div class="col-md-2">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=URL;?>/SQLProblems">SQL Problems</a>
+                    <a class="nav-link" href="<?=URL;?>/sqlproblems">SQL Problems</a>
                 </li>
             </div>
             <div class="offset-md-6 col-md-2">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?=$_SESSION['User']['username'];?>
+                        <?=$_SESSION['user']['username'];?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?=URL;?>/User/logout">Logout</a>
+                        <a class="dropdown-item" href="<?=URL;?>/user/logout">Logout</a>
                     </div>
                 </li>
             </div>

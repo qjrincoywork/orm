@@ -1,6 +1,5 @@
 <?php
-
-class AlgorithmController extends Controller
+class Algorithm extends Controller
 {
     public function index()
     {
@@ -50,4 +49,3 @@ class AlgorithmController extends Controller
         echo json_encode($data);
     }
 }
-?>

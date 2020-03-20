@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-header">Register</div>
                     <div class="card-body card-block">
-                        <form id="form_register" action="<?=URL?>/Home/register" method="post" class="form-modal" enctype="multipart/form-data">
+                        <form id="form_register" action="<?=URL?>/home/register" method="post" class="form-modal" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">

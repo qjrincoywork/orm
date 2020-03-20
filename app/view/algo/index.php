@@ -11,7 +11,7 @@
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="email" role="tabpanel" aria-labelledby="email-tab">
             <div class="container pt-4">
-                <form class="form-algo form-inline" method="POST" action="<?=URL;?>/Algorithm">
+                <form class="form-algo form-inline" method="POST" action="<?=URL;?>/algorithm">
                     <div class="row">
                         <div class="form-group">
                             <label for="email" class="col-form-label text-md-right text-secondary"><strong> Email </strong></label>

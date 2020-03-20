@@ -1,7 +1,7 @@
 <?php
 use lib\Session;
 
-class HomeController extends Controller
+class Home extends Controller
 {
     public function index()
     {
@@ -30,6 +30,7 @@ class HomeController extends Controller
                     $res = $db->insert($user);
                     if($res) {
                         $userProfile = $this->run->model('userprofile');
+                        $userProfile->setUser_id($res);
                         $userProfile->setEmail($values['email']);
                         $userProfile->setMobile_number($values['mobile_number']);
                         $userProfile->setLast_name($values['lastname']);
@@ -62,8 +63,8 @@ class HomeController extends Controller
                 if ($user) {
                     if($user[0]['is_active']) {
                         if($values['password'] == $user[0]['password']){
-                            Session::setSession('User',$user[0]);
-                            header("location: ".URL."/User");
+                            Session::setSession('user',$user[0]);
+                            header("location: ".URL."/user");
                             exit;
                         } else {
                             $data['error'] = 'Wrong password.';

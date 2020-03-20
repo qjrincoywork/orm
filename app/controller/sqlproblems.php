@@ -1,6 +1,6 @@
 <?php
 
-class SQLProblemsController extends Controller
+class SQLProblems extends Controller
 {
     public function index()
     {
@@ -66,7 +66,3 @@ class SQLProblemsController extends Controller
         echo json_encode($data);
     }
 }
-
-
-
-?>

@@ -8,16 +8,15 @@ class Route
         $link = isset($_GET['url']) ? $_GET['url'] : null;
 		$url = explode('/',trim($link,'/'));
 		
-		$controller = $url[0] != '' ? $url[0]. 'Controller' : 'indexController';
+		$controller = $url[0] != '' ? $url[0] : 'index';
 		$function = isset($url[1]) ? $url[1] : 'index';
 		
         $path = "app/controller/". $controller. ".php";
-		
         $function = isset($url[1]) ? $url[1] : 'index';
         
-		if(!Session::getSession('User') && $url[0] != 'User')
+		if(!Session::getSession('user') && $url[0] != 'user')
 		{
-            $controller = 'HomeController';
+            $controller = 'home';
 			$path = 'app/controller/' . $controller . '.php';
 		}
 		
@@ -50,6 +49,3 @@ class Route
 		exit;
     }
 }
-
-
-?>

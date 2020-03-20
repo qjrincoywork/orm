@@ -2,6 +2,7 @@
 class UserProfile
 {
     protected $id = null;
+	protected $user_id = null;
 	protected $email = null;
 	protected $first_name = null;
 	protected $last_name = null;
@@ -17,6 +18,10 @@ class UserProfile
 
 	public function getEmail() {
 		return $this->email;
+	}
+
+	public function getUser_id() {
+		return $this->user_id;
 	}
 
 	public function getFirst_name() {
@@ -49,6 +54,10 @@ class UserProfile
 
 	public function setId($id) {
 		$this->id = $id;
+	}
+
+	public function setUser_id($user_id) {
+		$this->user_id = $user_id;
 	}
 
 	public function setEmail($email) {
