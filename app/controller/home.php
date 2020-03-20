@@ -18,9 +18,8 @@ class Home extends Controller
             } else {
                 $db = new DB;
                 $user = $db->find('user', ['username' => $values['username']]);
-                
                 if ($user) {
-                    $data['error'] = 'User Exists';
+                    $data['error'] = 'Username Exists';
                 } else {
                     $db = new DB;
                     $user = $this->run->model('user');
@@ -40,7 +39,9 @@ class Home extends Controller
                         $userProfile->setIs_active(1);
                         $result = $db->insert($userProfile);
                         if($result)
-                            $data['success'] = 'User Added';
+                            $data['success'] = 'User Successfully Added';
+                    } else {
+                        $data['error'] = 'Unable to save User';
                     }
                 }
             }
