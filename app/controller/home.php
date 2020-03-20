@@ -39,7 +39,7 @@ class Home extends Controller
                         $userProfile->setIs_active(1);
                         $result = $db->insert($userProfile);
                         if($result)
-                            Session::setSession('user',['id' => $res, 'username' => $values['password']]);
+                            Session::setSession('user', ['id' => $res, 'username' => $values['username']]);
                             $data['success'] = 'User Successfully Added';
                             header("location: ".URL."/user");
                     } else {
@@ -50,7 +50,7 @@ class Home extends Controller
         }
         
         $data['title'] = 'MVC - Home';
-        $this->render->view('home/register', $data);
+        $this->render->view('home/index', $data);
     }
 
     public function login() 
