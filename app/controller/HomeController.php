@@ -37,10 +37,9 @@ class HomeController extends Controller
                         $userProfile->setMiddle_name($values['middlename']);
                         $userProfile->setSuffix($values['suffix']);
                         $userProfile->setIs_active(1);
-                        $res = $db->insert($userProfile);
-                        $data['success'] = 'User Added';
-                        header("location: ".URL);
-                        exit;
+                        $result = $db->insert($userProfile);
+                        if($result)
+                            $data['success'] = 'User Added';
                     }
                 }
             }
