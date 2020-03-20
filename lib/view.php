@@ -3,7 +3,7 @@ namespace lib;
 class View
 {
     public function view($filename, $data = null) {
-        if(Session::getSession('user') === null) {
+        if(Session::getSession('user')) {
             require_once 'app/view/layouts/header.php';
             require_once "app/view/". $filename. ".php";
             require_once 'app/view/layouts/footer.php';
