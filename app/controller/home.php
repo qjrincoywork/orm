@@ -40,8 +40,8 @@ class Home extends Controller
                         $result = $db->insert($userProfile);
                         if($result)
                             Session::setSession('user',['id' => $res, 'username' => $values['password']]);
-                            header("location: ".URL."/user");
                             $data['success'] = 'User Successfully Added';
+                            header("location: ".URL."/user");
                     } else {
                         $data['error'] = 'Unable to save User';
                     }
