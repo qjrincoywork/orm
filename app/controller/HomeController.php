@@ -11,8 +11,8 @@ class HomeController extends Controller
     
     public function register()
     {
-        $values = $_POST;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $values = $_POST;
             if ($values['username'] == '' || $values['password'] == '') {
                 $data['error'] = 'Username or Password can not be empty.';
             } else {
@@ -39,31 +39,30 @@ class HomeController extends Controller
                         $userProfile->setIs_active(1);
                         $res = $db->insert($userProfile);
                         $data['success'] = 'User Added';
+                        header("location: ".URL);
+                        exit;
                     }
                 }
             }
         }
-
+        
         $data['title'] = 'MVC - Home';
         $this->render->view('home/index', $data);
     }
 
     public function login() 
     {
-        $values = $_POST;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $values = $_POST;
             if ($values['username'] == '' || $values['password'] == '') {
                 $data['error'] = 'Username or Password can not be empty.';
             } else {
-                $logData = ['username' => $values['username'],
-                            'password' => $values['password']];
-                
                 $db = new DB;
-                $user = $db->find('user', ['username' => $logData['username']]);
+                $user = $db->find('user', ['username' => $values['username']]);
                 
                 if ($user) {
                     if($user[0]['is_active']) {
-                        if($logData['password'] == $user[0]['password']){
+                        if($values['password'] == $user[0]['password']){
                             Session::setSession('User',$user[0]);
                             header("location: ".URL."/User");
                             exit;

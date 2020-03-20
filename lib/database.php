@@ -3,12 +3,10 @@ class DB
 {
   private $pdo = null;
   private $stmt = null;
-  private $table;
 
   public function __construct()
   {
     try {
-      $this->table = strtolower(get_called_class());
       $this->pdo = new PDO(
         "mysql:host=".DATABASE_HOST.";dbname=".DATABASE_NAME.";charset=utf8", 
         DATABASE_USER, DATABASE_PASS, [
@@ -43,17 +41,14 @@ class DB
     return $result;
   }
   
-  public function find($table = null, $where = null, $order = null, $limit = null)
+  public function find($table, $where = null, $order = null, $limit = null)
   {
     $sql = "SELECT * FROM `$table` ";
-    if($where)
-    {
+    if($where) {
         $sql .= 'WHERE ';
-        foreach ($where as $columnName => $value)
-        {
+        foreach ($where as $columnName => $value) {
             $sql .= $columnName . " ";
-            if(is_array($value))
-            {
+            if(is_array($value)) {
                 $values = [];
                 foreach($value as $val){
                   if(is_numeric($val)){
@@ -70,10 +65,8 @@ class DB
         }
     }
 
-    if($order)
-    {
-        if(is_array($order))
-        {
+    if($order) {
+        if(is_array($order)) {
             $sql .= ' ORDER BY ';
             $count = 1;
             foreach ($order as $columnName => $value) {
@@ -89,8 +82,7 @@ class DB
         }
     }
     
-    if($limit)
-    {
+    if($limit) {
       $sql .= ' LIMIT ' . $limit;
     }
     
@@ -115,8 +107,7 @@ class DB
       try {
         $this->pdo->beginTransaction();
         $sth = $this->pdo->prepare($sql);
-        foreach ($values as $f => $v)
-        {
+        foreach ($values as $f => $v) {
             $sth->bindValue(':' . $f, $v);
         }
         $sth->execute();
@@ -156,4 +147,3 @@ class DB
     }
   }
 }
-?>
