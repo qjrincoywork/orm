@@ -1,10 +1,4 @@
 <div class="container pt-4">
-    <?php if(isset($data['error'])) {
-        echo "<div class='alert alert-danger' role='alert'>" .$data['error']. "</div>";
-    } else if(isset($data['success'])){
-        echo "<div class='alert alert-success' role='alert'>" .$data['success']. "</div>";
-    }
-    ?>
     <div class="card">
         <div class="card-header">Register</div>
             <div class="card-body card-block">
