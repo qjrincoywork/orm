@@ -39,6 +39,8 @@ class Home extends Controller
                         $userProfile->setIs_active(1);
                         $result = $db->insert($userProfile);
                         if($result)
+                            Session::setSession('user',['id' => $res, 'username' => $values['password']]);
+                            header("location: ".URL."/user");
                             $data['success'] = 'User Successfully Added';
                     } else {
                         $data['error'] = 'Unable to save User';
