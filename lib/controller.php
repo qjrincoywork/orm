@@ -14,22 +14,5 @@ class Controller
 		} catch (Exception $ex) {
 			die($ex->getMessage()); 
 		}
-		/* if(file_exists($path)){
-			require $path;
-			$modelName = $name . '_model';
-			$this->model = new $modelName();
-		} */
     }
-    
-	/* public function loadModel($name){
-		$path = 'model/' . $name . '_model.php';
-		if(file_exists($path)){
-			require $path;
-			$modelName = $name . '_model';
-			$this->model = new $modelName();
-		}
-	} */
 }
-
-
-?>
